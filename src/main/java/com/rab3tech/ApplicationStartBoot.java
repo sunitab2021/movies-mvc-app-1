@@ -7,13 +7,17 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * 
  * @author javahunk
  * This responsible to start your application
+ * 
+ * 
  *
  */
 @SpringBootApplication
 public class ApplicationStartBoot {
 	
 	public static void main(String[] args) {
-		SpringApplication.run(ApplicationStartBoot.class, args);
+		
+		SpringApplication application=new SpringApplication();
+		application.run(ApplicationStartBoot.class, args);
 	}
 
 }
