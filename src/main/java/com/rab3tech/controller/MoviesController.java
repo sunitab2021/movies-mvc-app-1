@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.rab3tech.controller.dto.MovieDTO;
 import com.rab3tech.service.IMoviesService;
-import com.rab3tech.service.MoviesService;
 
 @Controller
 

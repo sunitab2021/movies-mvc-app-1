@@ -1,12 +1,15 @@
 package com.rab3tech.dao.entity;
 
 import java.util.Date;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -20,6 +23,18 @@ public class MovieEntity {
 	private String poster;
 	private String story;
 	
+	private List<ActorsEntity> actors;
+
+	@OneToMany(mappedBy = "movie", cascade = {
+	        CascadeType.ALL
+	    })
+	public List<ActorsEntity> getActors() {
+		return actors;
+	}
+
+	public void setActors(List<ActorsEntity> actors) {
+		this.actors = actors;
+	}
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

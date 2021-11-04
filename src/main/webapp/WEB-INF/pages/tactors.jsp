@@ -22,41 +22,39 @@
     <img src="img/iStock-648784798.jpg" style="height: 100px;">
     
      <hr/>
-       <b>DATA IS COMING SOON!</b>
+       <b>Actor for a moviev</b>
      <hr/>
      
      <table class="table table-bordered">
     <thead>
       <tr>
-        <th>Mid</th>
+        <th>SNO</th>
         <th>Name</th>
-        <th>Year</th>
-        <th>Director</th>
-        <th>Poster</th>
+        <th>Role</th>
+        <th>Phote</th>
+        <th>Created</th>
           <th>Action</th>
       </tr>
     </thead>
     <tbody>
     
-     <cc:forEach items="${movieDTOs}" var="item">
+     <cc:forEach items="${actorDTOs}" var="item" varStatus="cc">
       <tr>
-        <td>${item.mid}
-         <a href="addActor?mid=${item.mid}"><button type="button" class="btn btn-primary">Add Actor</button></a>
-          <a href="actors?mid=${item.mid}"><button type="button" class="btn btn-danger">Actors</button></a>
+        <td>
+          ${cc.count}
         </td>
         <td>${item.name}</td>
-        <td>${item.mdate}</td>
-          <td>${item.director}</td>
+        <td>${item.role}</td>
          <td>
-          <img src="${item.poster}" style="height: 120px;"/>
+          <img src="${item.photo}" style="height: 120px;"/>
          </td>
-         
+         <td>${item.createdate}</td>
          <td>
-          <a href="deleteMovie?paa=${item.mid}">
+          <a href="deleteActor?paa=">
           <img src="img/download.jfif"/>
           </a>
           
-          <a href="editMovie?mid=${item.mid}">
+          <a href="editActor?mid=">
          	 <img src="img/edit.png" style="height: 60px;"/>
           </a>
          </td>
