@@ -2,6 +2,10 @@ package com.rab3tech.controller.dto;
 
 import java.util.Date;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+
+@XmlRootElement
 public class MovieDTO {
 
 	private int mid;

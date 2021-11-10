@@ -53,7 +53,6 @@ public class MoviesController {
 	public String deleteMovieAction(@RequestParam int paa,Model model) {
 		iMoviesService.deleteByMid(paa);
 		return "redirect:/movies";
-	
 		/*
 		 * List<MovieDTO> movieDTOs=moviesService.findAll(); //Adding my list into
 		 * request scope so that we can access the same on my JSP page
