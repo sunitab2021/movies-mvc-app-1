@@ -1,5 +1,8 @@
 package com.rab3tech.controller.dto;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class ApplicationResponseDTO {
 	
 	private String code;
